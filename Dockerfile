@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 RUN apt-get update
 
 # Install dependencies
-RUN apt-get install \
+RUN apt-get install -y \
 	git \
 	make \
 	build-essential \
