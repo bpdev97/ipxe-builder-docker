@@ -1,5 +1,4 @@
 # ipxe-build-docker
-#ipxe-build-docker 
 Docker container used to make building ipxe from source easier and faster. 
 
 ## Pre-requirements
