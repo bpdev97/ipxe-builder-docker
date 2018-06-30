@@ -1,16 +1,19 @@
-FROM ubuntu:16.04
+FROM debian:stretch-slim
 RUN apt-get update
 
 # Install dependencies
 RUN apt-get install -y \
-	git \
+	gcc \
+	binutils \
 	make \
-	build-essential \
-	curl \
+	perl \
+	liblzma5 \
+	mtools \
 	genisoimage \
-	liblzma-dev \
-	binutils-dev \
-	zlib1g-dev
+	syslinux \
+	isolinux
+
+RUN apt-get upgrade -y
 
 WORKDIR /ipxe/src
-CMD ["make"]
+CMD make bin/ipxe.iso EMBED=embed.ipxe
