@@ -7,7 +7,7 @@ RUN apt-get install -y \
 	binutils \
 	make \
 	perl \
-	liblzma5 \
+	liblzma-dev \
 	mtools \
 	genisoimage \
 	syslinux \
